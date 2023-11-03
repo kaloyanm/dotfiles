@@ -95,10 +95,13 @@ syntax enable                               " syntax highlight
 set t_Co=256                                " set 256 colors
 " important!!
 set termguicolors
-set background=dark
+set background=light
 " the configuration options should be placed before `colorscheme edge`
-" colorscheme lucius                          " set color scheme
-colorscheme jellybeans                      " set color scheme
+" colorscheme jellybeans                      " set color scheme
+let g:lucius_high_contrast=1
+let g:lucius_use_bold=1
+let g:lucius_style='light'
+colorscheme lucius                          " set color scheme
 
 set number                                  " show line numbers
 set ignorecase                              " ignore case sensitive search
