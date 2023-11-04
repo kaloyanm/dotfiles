@@ -87,7 +87,7 @@ filetype plugin indent on
 "=====================================================
 "" General settings
 "=====================================================
-set guifont=Monaco\ 10
+set guifont=Monaco\ Bold\ 10
 set guioptions=agimrLtT
 
 syntax enable                               " syntax highlight
@@ -95,12 +95,12 @@ syntax enable                               " syntax highlight
 set t_Co=256                                " set 256 colors
 " important!!
 set termguicolors
-set background=light
+set background=dark
 " the configuration options should be placed before `colorscheme edge`
 " colorscheme jellybeans                      " set color scheme
 let g:lucius_high_contrast=1
 let g:lucius_use_bold=1
-let g:lucius_style='light'
+let g:lucius_style='dark'
 colorscheme lucius                          " set color scheme
 
 set number                                  " show line numbers
@@ -249,7 +249,7 @@ augroup vimrc_autocmds
     autocmd FileType python,rst,c,cpp highlight Excess guibg=White
     autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
     autocmd FileType python,rst,c,cpp set nowrap
-    autocmd FileType python,rst,c,cpp set colorcolumn=80
+    autocmd FileType python,rst,c,cpp set colorcolumn=100
 augroup END
 
 " code folding
@@ -305,3 +305,15 @@ au User lsp_setup call lsp#register_server({
   \ 'whitelist': ['ruby'],
   \ })
 
+" Configure vim-lsp for Python (using pyright)
+au User lsp_setup call lsp#register_server({
+  \ 'name': 'pyright',
+  \ 'cmd': {server_info->['pyright-langserver', '--stdio']},
+  \ 'whitelist': ['python'],
+  \ })
+" OR, if you prefer to use python-language-server (pyls)
+" au User lsp_setup call lsp#register_server({
+"   \ 'name': 'pyls',
+"   \ 'cmd': {server_info->['pyls']},
+"   \ 'whitelist': ['python'],
+"   \ })
