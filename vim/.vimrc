@@ -98,9 +98,10 @@ set termguicolors
 set background=dark
 " the configuration options should be placed before `colorscheme edge`
 " colorscheme jellybeans                      " set color scheme
-let g:lucius_high_contrast=1
+" let g:lucius_high_contrast=1
 let g:lucius_use_bold=1
 let g:lucius_style='dark'
+let g:lucius_contrast='high'
 colorscheme lucius                          " set color scheme
 
 set number                                  " show line numbers
@@ -306,14 +307,18 @@ au User lsp_setup call lsp#register_server({
   \ })
 
 " Configure vim-lsp for Python (using pyright)
+" au User lsp_setup call lsp#register_server({
+"   \ 'name': 'pyright',
+"   \ 'cmd': {server_info->['pyright-langserver', '--stdio']},
+"   \ 'whitelist': ['python'],
+"   \ 'config': {
+"   \   'pyright.disableTypeChecking': v:true
+"   \ }
+"   \ })
+" OR, if you prefer to use python-language-server (pyls)
 au User lsp_setup call lsp#register_server({
-  \ 'name': 'pyright',
-  \ 'cmd': {server_info->['pyright-langserver', '--stdio']},
+  \ 'name': 'pyls',
+  \ 'cmd': {server_info->['pyls']},
   \ 'whitelist': ['python'],
   \ })
-" OR, if you prefer to use python-language-server (pyls)
-" au User lsp_setup call lsp#register_server({
-"   \ 'name': 'pyls',
-"   \ 'cmd': {server_info->['pyls']},
-"   \ 'whitelist': ['python'],
-"   \ })
+
