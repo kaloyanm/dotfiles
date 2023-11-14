@@ -28,7 +28,8 @@ call vundle#begin()
     Plugin 'majutsushi/tagbar'                  " Class/module browser
     Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
     Plugin 'mileszs/ack.vim'
-    Plugin 'flazz/vim-colorschemes'
+    " Plugin 'flazz/vim-colorschemes'
+    Plugin 'mswift42/vim-themes'
     Plugin 'kvrohit/rasmus.nvim'
     Plugin 'plasticboy/vim-markdown'            " Markdown vim mode
     Plugin 'thinca/vim-quickrun'
@@ -95,12 +96,12 @@ syntax enable                               " syntax highlight
 set t_Co=256                                " set 256 colors
 " important!!
 set termguicolors
-set background=light
+set background=dark
 " the configuration options should be placed before `colorscheme edge`
-let g:lucius_use_bold=1
-let g:lucius_style='dark'
-let g:lucius_contrast='high'
-colorscheme space-vim-dark                  " set color scheme
+" let g:lucius_use_bold=1
+" let g:lucius_style='dark'
+" let g:lucius_contrast='high'
+colorscheme warm-night                     " set color scheme
 
 set number                                  " show line numbers
 set ignorecase                              " ignore case sensitive search
