@@ -28,13 +28,14 @@ call vundle#begin()
     Plugin 'majutsushi/tagbar'                  " Class/module browser
     Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
     Plugin 'mileszs/ack.vim'
-    " Plugin 'flazz/vim-colorschemes'
+    Plugin 'flazz/vim-colorschemes'
     Plugin 'mswift42/vim-themes'
     Plugin 'kvrohit/rasmus.nvim'
     Plugin 'plasticboy/vim-markdown'            " Markdown vim mode
     Plugin 'thinca/vim-quickrun'
     Plugin 'jremmen/vim-ripgrep'
     Plugin 'jonathanfilip/vim-lucius'
+    Plugin 'chriskempson/base16-vim'
 
     "-------------------=== Other ===-------------------------------
     Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
@@ -88,7 +89,7 @@ filetype plugin indent on
 "=====================================================
 "" General settings
 "=====================================================
-set guifont=Monaco\ Bold\ 10
+set guifont=Noto\ Sans\ Mono\ 9.5
 set guioptions=agimrLtT
 
 syntax enable                               " syntax highlight
@@ -101,7 +102,9 @@ set background=dark
 " let g:lucius_use_bold=1
 " let g:lucius_style='dark'
 " let g:lucius_contrast='high'
-colorscheme warm-night                     " set color scheme
+" let g:gruvbox_contrast_dark = 'hard'
+let base16colorspace=256
+colorscheme base16-gruvbox-dark-hard        " set color scheme
 
 set number                                  " show line numbers
 set ignorecase                              " ignore case sensitive search
