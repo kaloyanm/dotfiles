@@ -1,6 +1,6 @@
 return {
   -- add gruvbox
-  { "chriskempson/base16-vim" },
+  { "RRethy/nvim-base16" },
 
   -- Configure LazyVim to load gruvbox
   {

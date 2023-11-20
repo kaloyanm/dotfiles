@@ -47,3 +47,17 @@ require("lazy").setup({
     },
   },
 })
+
+require("lspconfig").solargraph.setup({
+  cmd = { "solargraph", "stdio" },
+  settings = {
+    solargraph = {
+      diagnostics = true,
+    },
+  },
+})
+
+-- local linters = require("lvim.lsp.null-ls.linters")
+-- linters.setup({
+-- { exe = "rubocop" },
+-- })
